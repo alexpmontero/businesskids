@@ -1,0 +1,60 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="mainbar"  role="navigation">
+      <div class="container">
+        <div class="navbar-header">          
+          <div class="navbar-brand">BusinessKids | Escritorio</div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-action="logout" data-toggle="tooltip" data-placement="bottom" title="Cerrar sesión"><i class="glyphicon glyphicon-log-out"></i> Cerrar</a></li>            
+          </ul>     
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+    <div id="contact-container" class="container">
+        <div class="row">
+            <div class="col-md-12" style="margin-top:80px;">
+                <form id="filter-form" class="form-inline" novalidate>
+                  <div class="form-group">                            
+                    <input type="text" name="nombre" class="form-control input-sm" placeholder="Buscar por nombre" autocomplete="off">
+                  </div>         
+                  <a href="#" data-action="export" class="btn btn-success btn-sm pull-right" data-toggle="tooltip" data-placement="bottom" title="Descargar lista en excel"><i class="glyphicon glyphicon-cloud-download
+"></i> Descargar Listado</a>
+                </form>                    
+                
+            </div>
+        </div>
+        <div class="row">
+            <div id="contact-table" class="col-md-12" style="margin-top:20px;">
+                <table class="table table-hover">
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Nombre</th>
+                          <th>Teléfono</th>
+                          <th>Correo Electrónico</th>
+                          <th>Sucursal</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {% for item in list %}
+                      <tr>
+                          <td>{{loop.index}}</td>
+                          <td>{{item.nombre}}</td>
+                          <td>
+                          {% if item.telefono %}
+                            {{item.telefono}}  
+                          {% endif %}                          
+                          </td>
+                          <td>{{item.email}}</td>
+                          <td>{{item.sucursal}}</td>
+                      </tr>
+                      {% endfor %}
+                  </tbody>
+                </table>                
+
+                <div id="error-alert" class="alert alert-danger" style="display:none;" role="alert">Ocurrió un error, no se ha podido completar la solicitud</div>
+            </div>
+        </div>
+    </div>
