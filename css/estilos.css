@@ -924,9 +924,9 @@ footer > div
 
 
 
-
+/**/
 /* ----- CLASES ------*/
-.load
+/*.load
 {
 	background: #73a950 url(../imgs/load_bussiness2.gif) no-repeat center center;
 	background-size: 15%;
@@ -937,7 +937,7 @@ footer > div
 	top: 0;
 	width: 100%;
 	z-index: 20;
-}
+}*/
 
 .title_sec
 {

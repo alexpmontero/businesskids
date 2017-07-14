@@ -1,9 +1,9 @@
 
-$(window).load(function() {
+// $(window).load(function() {
 // setTimeout(function(){
-	$(".load").fadeOut(200);
+	// $(".load").fadeOut(200);
 // },2000);
-});        
+// });        
 
 function slider()
 {

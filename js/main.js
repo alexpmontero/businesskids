@@ -221,6 +221,6 @@ $(document).ready(function(){
 	});
 });
 
-$(window).load(function() {
-	$(".load").fadeOut(200);
-});
+// $(window).load(function() {
+// 	$(".load").fadeOut(200);
+// });
